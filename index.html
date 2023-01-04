@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" href="./images/logo-new-1.jpg">
+    <!--Style Css-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!---Bootstrap CSS-->
+    <link rel="stylesheet" href="./BootstrapCss/bootstrap.min.css">
+    <!---Font Awosome -->
+    <link rel="stylesheet" href="./fontawesome/all.min.css">
+    <!---Link Font-->
+    <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+
+<body>
+    <header>
+        <nav class="container-padding newNav">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center justify-content-start flex1">
+                    <a href="index.html"><img src="./images/Final Logo-04.png" alt="" class="img-nav"></a>
+                    <form class="div-show" role="search">
+                        <div class="input-group add-on">
+                            <input class="form-control" placeholder="البحث عن مكان " name="srch-term" id="srch-term"
+                                type="text">
+                            <div class="input-group-btn">
+                                <button class="btn-header " type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="d-flex align-items-center justify-content-center flex-2">
+                    <div class="div-image-user">
+                        <img src="./images/image-user.png" alt="" class="img-user">
+                    </div>
+                    <div class="dropdown" tabindex="0">
+                        <div class="dropdown__toggle"> عبد العزيز <i class='fas fa-angle-down mr-1'></i></div>
+                        <ul role="listbox" class="dropdown__menu" tabindex="-1">
+                            <a href="detailsUser.html">
+                                <li>
+                                    <span tabindex="0" class="dropdown__item">الملف الشخصي </span>
+                                </li>
+                            </a>
+                            <a href="EditPageUser.html">
+                                <li>
+                                    <span tabindex="0" class="dropdown__item"> تعديل الملف الشخصي </span>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </nav>
+        <nav class="navbar">
+            <div class="push-left">
+                <button id="menu-toggler" data-class="menu-active" class="hamburger">
+                    <span class="hamburger-line hamburger-line-top"></span>
+                    <span class="hamburger-line hamburger-line-middle"></span>
+                    <span class="hamburger-line hamburger-line-bottom"></span>
+                </button>
+
+                <!--  Menu compatible with wp_nav_menu  -->
+                <ul id="primary-menu" class="menu nav-menu">
+                    <li class="menu-item active">
+                        <a class="nav__link" href="./index.html">
+                            <i class="bx bx-home icon "></i>
+                            الرئيسية
+                        </a>
+                    </li>
+                    <li class="menu-item ">
+                        <a class="nav__link" href="./manageMeditation.html">
+                            <i class="bx bx-add-to-queue icon "></i>
+                            تأمل
+                        </a>
+                    </li>
+                    <li class="menu-item ">
+                        <a class="nav__link" href="./manageTasting.html">
+                            <i class="bx bx-add-to-queue icon "></i>
+                            تذوق
+                        </a>
+                    </li>
+
+                    <li class="menu-item ">
+                        <a class="nav__link" href="./manageUsers.html">
+                            <i class="bx bx-add-to-queue icon "></i>
+                            المستخدمين
+                        </a>
+                    </li>
+                    <li class="menu-item ">
+                        <a class="nav__link" href="./manageDiscover.html">
+                            <i class="bx bx-add-to-queue icon "></i>
+                            أكتشف
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a class="nav__link" href="./detailsUser.html">
+                            <i class="bx bx-home icon "></i>
+                            الملف الشخصي
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </nav>
+
+
+    </header>
+
+
+    <main>
+        <section class="container-padding mt-5">
+            <div class="d-flex align-items-center justify-content-between flex-col">
+
+                <div class="d-flex align-items-center  box-section">
+                    <img src="./images/pencil.png" alt="">
+                    <div>
+                        <h2 class="text-blue text">عدد الأماكن ( تأمل )</h2>
+                        <p>9</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center  box-section">
+                    <img src="./images/evaluation.png" alt="">
+                    <div>
+                        <h2 class="text-green text">عدد الأماكن ( تذوق )</h2>
+                        <p>2</p>
+                    </div>
+                </div>
+
+
+                <div class="d-flex align-items-center box-section">
+                    <img src="./images/time.png" alt="">
+                    <div>
+                        <h2 class="text-bur text">عدد الأماكن ( أكتشف )</h2>
+                        <p>0</p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center  box-section">
+                    <img src="./images/checklist.png" alt="">
+                    <div>
+                        <h2 class="text-red text">عدد المستخدمين </h2>
+                        <p>4</p>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </section>
+        <section class="container-padding mt-3">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="box-section2 p-3">
+                        <h2 class="h2-style text-blue">عدد الأماكن المسندة ( تأمل )</h2>
+                        <div class="d-flex align-items-center justify-content-between box2-section">
+                            <div class="borderleft">
+                                <h2 class="text-blue text ">اليوم</h2>
+                                <p>0</p>
+                            </div>
+                            <div class="borderleft">
+                                <h2 class="text-blue text ">هذا الأسبوع</h2>
+                                <p>0</p>
+                            </div>
+                            <div>
+                                <h2 class="text-blue text">هذا الشهر</h2>
+                                <p>0</p>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <div class="bar bar1">82%</div>
+                        </div>
+                        <a href="">
+                            <p class="p-style text-blue">تصفح الأماكن المسندة</p>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="box-section2 p-3">
+                        <h2 class="h2-style text-green">عدد الأماكن المسندة ( تذوق )</h2>
+                        <div class="d-flex align-items-center justify-content-between box2-section">
+                            <div class="borderleft">
+                                <h2 class="text-blue text ">اليوم</h2>
+                                <p>0</p>
+                            </div>
+                            <div class="borderleft">
+                                <h2 class="text-blue text ">هذا الأسبوع</h2>
+                                <p>0</p>
+                            </div>
+                            <div>
+                                <h2 class="text-blue text">هذا الشهر</h2>
+                                <p>0</p>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <div class="bar bar2">82%</div>
+                        </div>
+                        <a href="">
+                            <p class="p-style text-green">تصفح الأماكن المسندة</p>
+                        </a>
+
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="box-section2 p-3">
+                        <h2 class="h2-style text-red">عدد الأماكن المسندة ( أكتشف )</h2>
+                        <div class="d-flex align-items-center justify-content-between box2-section">
+                            <div class="borderleft">
+                                <h2 class="text-blue text ">اليوم</h2>
+                                <p>0</p>
+                            </div>
+                            <div class="borderleft">
+                                <h2 class="text-blue text ">هذا الأسبوع</h2>
+                                <p>0</p>
+                            </div>
+                            <div>
+                                <h2 class=" text">هذا الشهر</h2>
+                                <p>0</p>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <div class="bar bar3">82%</div>
+                        </div>
+                        <a href="">
+                            <p class="p-style text-red">تصفح الأماكن المسندة</p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container-padding mt-3">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="box-section3 p-3">
+                        <h2 class="h2-section3">مقارنة بين المهمات التي أنشات والمهمات التي أنهيت</h2>
+                        <div class="d-flex align-items-center justify-content-start sec1">
+                            <i class="fa-solid fa-square color1"></i>
+                            <p>المهمات التي أنشئت</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start sec2">
+                            <i class="fa-solid fa-square color2"></i>
+                            <p>المهمات التي انتهت</p>
+                        </div>
+                        <figure class="pie-chart">
+
+                        </figure>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="box-section3 p-3">
+                        <h2 class="h2-section3">المهمات التي تم انجازها لهذا العام</h2>
+
+                        <div id="container" style="width:100%; height:400px;"></div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container-padding mt-3">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="box-section4 p-3">
+                        <h2 class="h2-section4">أدوات مدير النظام</h2>
+                        <p class="p-section4">هنا أدوات التي يحتاجها مدير النظام لإدارة الموقع</p>
+                        <div class="row mt-5">
+                            <div class="col-md-6 ">
+                                <a href="manageUsers.html">
+                                    <div class="d-flex align-items-center justify-content-start  box-section6">
+                                        <i class="fa-solid fa-users"></i>
+                                        <div class="pt-3">
+                                            <h5>إدارة الموظفين</h5>
+                                            <p>تعديل , حذف أو اضافة موظفين</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center justify-content-start  box-section6">
+                                    <i class="fa-solid fa-gears"></i>
+                                    <div class="pt-3">
+                                        <h5>إجراءات المهمات</h5>
+                                        <p>إدارة اجراءات المهمات التي تنسب الى مهمة معينة</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div class="d-flex align-items-center justify-content-start  box-section6">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <div class="pt-3">
+                                        <h5>إدارة المناصب و المهن</h5>
+                                        <p>اضافة المناصب والمهن التي تنسب الى الموظف</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center justify-content-start  box-section6">
+                                    <i class="fa-solid fa-dice"></i>
+                                    <div class="pt-3">
+                                        <h5>أنواع المهمات</h5>
+                                        <p>إدارة أنواع المهمات التي تنسب الي كل مهمة قبل انشائها</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div class="d-flex align-items-center justify-content-start  box-section6">
+                                    <i class="fa-solid fa-people-roof"></i>
+                                    <div class="pt-3">
+                                        <h5>إدارة الأقسام</h5>
+                                        <p>الأقسام في الشرمة التي تنسب الى موظف معين</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="container-padding mt-5 ">
+        <div class="footer">
+            <p> جميع الحقوق محفوظة لدي مجموعة أحمد باشماخ لخدمات الأعمال</p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/dropdown.js"> </script>
+    <script src="./js/index.js"></script>
+    <script src="./fontawesome/all.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="./js/map.js"></script>
+    <script src="https://use.fontawesome.com/43681fd11d.js"></script>
+    <script src="./js/dropdown-icon.js"></script>
+</body>
+
+</html>
