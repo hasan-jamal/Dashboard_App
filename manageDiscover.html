@@ -127,255 +127,713 @@
 
 
     <main class="container-padding">
-        <h2 class="h2-main"> قائمة الأماكن ( أكتشف )</h2>
-        <div class="row">
-            <div class="col-md-3">
-                <section class="box-section8 ">
-                    <i class="fa-solid fa-users search-big mb-4"></i>
-                    <h4>قائمة ادارة الأماكن (أكتشف)</h4>
-                    <form action="">
-                        <div class="row">
-                            <div class="col-md-12 mt-3">
-                                <div class="a-btn btn-back">
-                                    <!-- Button trigger modal -->
-                                    <a data-toggle="modal" data-target="#Create">اضافة مكان</a>
+        <div id="category">
+            <h2 class="h2-main"> قائمة الأماكن ( أكتشف )</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <section class="box-section8 ">
+                        <i class="fa-solid fa-users search-big mb-4"></i>
+                        <h4>قائمة ادارة الأماكن (أكتشف)</h4>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-12 mt-3">
+                                    <div class="a-btn btn-back">
+                                        <!-- Button trigger modal -->
+                                        <a data-toggle="modal" data-target="#Create">اضافة مكان</a>
+                                    </div>
                                 </div>
+
                             </div>
+                        </form>
+                    </section>
 
-                        </div>
-                    </form>
-                </section>
+                    <div class="text-head text-head-color mt-4">
+                        <p>البحث عن اسم المكان</p>
+                    </div>
+                    <section class="box-section8 ">
 
-                <div class="text-head text-head-color mt-4">
-                    <p>البحث عن اسم المكان</p>
+                        <i class="fas fa-search search-big mb-4"></i>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for=""> اسم المكان : *</label>
+                                        <input type="text" name="" id="" placeholder="ادخل اسم المكان">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 mt-3">
+                                    <div class="a-btn btn-back">
+                                        <a href="">البحث</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </section>
                 </div>
-                <section class="box-section8 ">
-
-                    <i class="fas fa-search search-big mb-4"></i>
-                    <form action="">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for=""> اسم المكان : *</label>
-                                    <input type="text" name="" id="" placeholder="ادخل اسم المكان">
-                                </div>
+                <div class="col-md-9 ">
+                    <section class="box-section9">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <h5 class="h5-head">إدارة الأماكن</h5>
+                                <p class="p-head">اي مكان يحذف سوف يحذف بصفة دائمة</p>
                             </div>
-
-                            <div class="col-md-12 mt-3">
-                                <div class="a-btn btn-back">
-                                    <a href="">البحث</a>
-                                </div>
+                            <div>
+                                <button onclick="clickSubCategory()" class="btn btn-success text-white">
+                                    الأقسام التابعة
+                                </button>
                             </div>
-
                         </div>
-                    </form>
-                </section>
+
+
+                        <div class="main-content">
+                            <table id="files_list" class="table table-striped dt-responsive  " style="width:100%">
+                                <thead class="thead_dark">
+                                    <tr>
+                                        <th class="th_text">#</th>
+                                        <th class="th_text">اسم</th>
+                                        <th class="th_text">عنوان المكان</th>
+                                        <th class="th_text"> الوصف</th>
+                                        <th class="th_text">التقييم </th>
+                                        <th class="th_text">طريقة التواصل </th>
+                                        <th class="th_text">المستخدم</th>
+                                        <th class="th_text">صور المكان</th>
+                                        <th class="th_text">الأحداث</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> 40</td>
+                                        <td> عبد العززي</td>
+                                        <td>غير محدد</td>
+                                        <td> test@gmail.com</td>
+                                        <td> 4.5 <i class='bx bxs-star'></i></td>
+                                        <td> الرياض</td>
+                                        <td> اللهم ارزقنا من كرمك</td>
+                                        <td>
+                                            <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                <i class='bx bx-show-alt'></i>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <a data-toggle="modal" data-target="#Update" class="a-edit">
+                                                    <i class='bx bx-edit'></i>
+                                                </a>
+                                                <a data-toggle="modal" data-target="#Delete" class="a-delete">
+                                                    <i class='bx bx-trash'></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 40</td>
+                                        <td> عبد العززي</td>
+                                        <td>غير محدد</td>
+                                        <td> test@gmail.com</td>
+                                        <td> 4.5 <i class='bx bxs-star'></i></td>
+                                        <td> الرياض</td>
+                                        <td> اللهم ارزقنا من كرمك</td>
+                                        <td>
+                                            <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                <i class='bx bx-show-alt'></i>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <a data-toggle="modal" data-target="#Update" class="a-edit">
+                                                    <i class='bx bx-edit'></i>
+                                                </a>
+                                                <a data-toggle="modal" data-target="#Delete" class="a-delete">
+                                                    <i class='bx bx-trash'></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 40</td>
+                                        <td> عبد العززي</td>
+                                        <td>غير محدد</td>
+                                        <td> test@gmail.com</td>
+                                        <td> 4.5 <i class='bx bxs-star'></i></td>
+                                        <td> الرياض</td>
+                                        <td> اللهم ارزقنا من كرمك</td>
+                                        <td>
+                                            <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                <i class='bx bx-show-alt'></i>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <a data-toggle="modal" data-target="#Update" class="a-edit">
+                                                    <i class='bx bx-edit'></i>
+                                                </a>
+                                                <a data-toggle="modal" data-target="#Delete" class="a-delete">
+                                                    <i class='bx bx-trash'></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 40</td>
+                                        <td> عبد العززي</td>
+                                        <td>غير محدد</td>
+                                        <td> test@gmail.com</td>
+                                        <td> 4.5 <i class='bx bxs-star'></i></td>
+                                        <td> الرياض</td>
+                                        <td> اللهم ارزقنا من كرمك</td>
+                                        <td>
+                                            <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                <i class='bx bx-show-alt'></i>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <a data-toggle="modal" data-target="#Update" class="a-edit">
+                                                    <i class='bx bx-edit'></i>
+                                                </a>
+                                                <a data-toggle="modal" data-target="#Delete" class="a-delete">
+                                                    <i class='bx bx-trash'></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 40</td>
+                                        <td> عبد العززي</td>
+                                        <td>غير محدد</td>
+                                        <td> test@gmail.com</td>
+                                        <td> 4.5 <i class='bx bxs-star'></i></td>
+                                        <td> الرياض</td>
+                                        <td> اللهم ارزقنا من كرمك</td>
+                                        <td>
+                                            <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                <i class='bx bx-show-alt'></i>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <a data-toggle="modal" data-target="#Update" class="a-edit">
+                                                    <i class='bx bx-edit'></i>
+                                                </a>
+                                                <a data-toggle="modal" data-target="#Delete" class="a-delete">
+                                                    <i class='bx bx-trash'></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 40</td>
+                                        <td> عبد العززي</td>
+                                        <td>غير محدد</td>
+                                        <td> test@gmail.com</td>
+                                        <td> 4.5 <i class='bx bxs-star'></i></td>
+                                        <td> الرياض</td>
+                                        <td> اللهم ارزقنا من كرمك</td>
+                                        <td>
+                                            <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                <i class='bx bx-show-alt'></i>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <a data-toggle="modal" data-target="#Update" class="a-edit">
+                                                    <i class='bx bx-edit'></i>
+                                                </a>
+                                                <a data-toggle="modal" data-target="#Delete" class="a-delete">
+                                                    <i class='bx bx-trash'></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 40</td>
+                                        <td> عبد العززي</td>
+                                        <td>غير محدد</td>
+                                        <td> test@gmail.com</td>
+                                        <td> 4.5 <i class='bx bxs-star'></i></td>
+                                        <td> الرياض</td>
+                                        <td> اللهم ارزقنا من كرمك</td>
+                                        <td>
+                                            <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                <i class='bx bx-show-alt'></i>
+                                            </button>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <a data-toggle="modal" data-target="#Update" class="a-edit">
+                                                    <i class='bx bx-edit'></i>
+                                                </a>
+                                                <a data-toggle="modal" data-target="#Delete" class="a-delete">
+                                                    <i class='bx bx-trash'></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </section>
+                </div>
             </div>
-            <div class="col-md-9 ">
-                <section class="box-section9">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div>
-                            <h5 class="h5-head">إدارة الأماكن</h5>
-                            <p class="p-head">اي مكان يحذف سوف يحذف بصفة دائمة</p>
-                        </div>
-                        <div>
-                            <a href="./subCategoryDiscover.html" class="btn btn-success text-white">
-                                الأقسام التابعة
-                            </a>
-                        </div>
+        </div>
+        <div id="subCategory">
+            <h2 class="h2-main"> قائمة الأقسام التابعة لأكتشف </h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <section class="box-section8 ">
+                        <i class="fa-solid fa-users search-big mb-4"></i>
+                        <h4>قائمة الأقسام التابعة لأكتشف</h4>
+                    </section>
 
+                    <div class="text-head text-head-color mt-4">
+                        <p>البحث عن اسم المكان</p>
                     </div>
+                    <section class="box-section8 ">
 
+                        <i class="fas fa-search search-big mb-4"></i>
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for=""> اسم المكان : *</label>
+                                        <input type="text" name="" id="" placeholder="ادخل اسم المكان">
+                                    </div>
+                                </div>
 
-                    <div class="main-content">
-                        <table id="files_list" class="table table-striped dt-responsive  " style="width:100%">
-                            <thead class="thead_dark">
-                                <tr>
-                                    <th class="th_text">#</th>
-                                    <th class="th_text">اسم</th>
-                                    <th class="th_text">عنوان المكان</th>
-                                    <th class="th_text"> الوصف</th>
-                                    <th class="th_text">التقييم </th>
-                                    <th class="th_text">طريقة التواصل </th>
-                                    <th class="th_text">المستخدم</th>
-                                    <th class="th_text">صور المكان</th>
-                                    <th class="th_text">الأحداث</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td> 40</td>
-                                    <td> عبد العززي</td>
-                                    <td>غير محدد</td>
-                                    <td> test@gmail.com</td>
-                                    <td> 4.5 <i class='bx bxs-star'></i></td>
-                                    <td> الرياض</td>
-                                    <td> اللهم ارزقنا من كرمك</td>
-                                    <td>
-                                        <button class="a-show" data-toggle="modal" data-target="#Show">
-                                            <i class='bx bx-show-alt'></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <a data-toggle="modal" data-target="#Update" class="a-edit">
-                                                <i class='bx bx-edit'></i>
-                                            </a>
-                                            <a data-toggle="modal" data-target="#Delete" class="a-delete">
-                                                <i class='bx bx-trash'></i>
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td> 40</td>
-                                    <td> عبد العززي</td>
-                                    <td>غير محدد</td>
-                                    <td> test@gmail.com</td>
-                                    <td> 4.5 <i class='bx bxs-star'></i></td>
-                                    <td> الرياض</td>
-                                    <td> اللهم ارزقنا من كرمك</td>
-                                    <td>
-                                        <button class="a-show" data-toggle="modal" data-target="#Show">
-                                            <i class='bx bx-show-alt'></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <a data-toggle="modal" data-target="#Update" class="a-edit">
-                                                <i class='bx bx-edit'></i>
-                                            </a>
-                                            <a data-toggle="modal" data-target="#Delete" class="a-delete">
-                                                <i class='bx bx-trash'></i>
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td> 40</td>
-                                    <td> عبد العززي</td>
-                                    <td>غير محدد</td>
-                                    <td> test@gmail.com</td>
-                                    <td> 4.5 <i class='bx bxs-star'></i></td>
-                                    <td> الرياض</td>
-                                    <td> اللهم ارزقنا من كرمك</td>
-                                    <td>
-                                        <button class="a-show" data-toggle="modal" data-target="#Show">
-                                            <i class='bx bx-show-alt'></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <a data-toggle="modal" data-target="#Update" class="a-edit">
-                                                <i class='bx bx-edit'></i>
-                                            </a>
-                                            <a data-toggle="modal" data-target="#Delete" class="a-delete">
-                                                <i class='bx bx-trash'></i>
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td> 40</td>
-                                    <td> عبد العززي</td>
-                                    <td>غير محدد</td>
-                                    <td> test@gmail.com</td>
-                                    <td> 4.5 <i class='bx bxs-star'></i></td>
-                                    <td> الرياض</td>
-                                    <td> اللهم ارزقنا من كرمك</td>
-                                    <td>
-                                        <button class="a-show" data-toggle="modal" data-target="#Show">
-                                            <i class='bx bx-show-alt'></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <a data-toggle="modal" data-target="#Update" class="a-edit">
-                                                <i class='bx bx-edit'></i>
-                                            </a>
-                                            <a data-toggle="modal" data-target="#Delete" class="a-delete">
-                                                <i class='bx bx-trash'></i>
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td> 40</td>
-                                    <td> عبد العززي</td>
-                                    <td>غير محدد</td>
-                                    <td> test@gmail.com</td>
-                                    <td> 4.5 <i class='bx bxs-star'></i></td>
-                                    <td> الرياض</td>
-                                    <td> اللهم ارزقنا من كرمك</td>
-                                    <td>
-                                        <button class="a-show" data-toggle="modal" data-target="#Show">
-                                            <i class='bx bx-show-alt'></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <a data-toggle="modal" data-target="#Update" class="a-edit">
-                                                <i class='bx bx-edit'></i>
-                                            </a>
-                                            <a data-toggle="modal" data-target="#Delete" class="a-delete">
-                                                <i class='bx bx-trash'></i>
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td> 40</td>
-                                    <td> عبد العززي</td>
-                                    <td>غير محدد</td>
-                                    <td> test@gmail.com</td>
-                                    <td> 4.5 <i class='bx bxs-star'></i></td>
-                                    <td> الرياض</td>
-                                    <td> اللهم ارزقنا من كرمك</td>
-                                    <td>
-                                        <button class="a-show" data-toggle="modal" data-target="#Show">
-                                            <i class='bx bx-show-alt'></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <a data-toggle="modal" data-target="#Update" class="a-edit">
-                                                <i class='bx bx-edit'></i>
-                                            </a>
-                                            <a data-toggle="modal" data-target="#Delete" class="a-delete">
-                                                <i class='bx bx-trash'></i>
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td> 40</td>
-                                    <td> عبد العززي</td>
-                                    <td>غير محدد</td>
-                                    <td> test@gmail.com</td>
-                                    <td> 4.5 <i class='bx bxs-star'></i></td>
-                                    <td> الرياض</td>
-                                    <td> اللهم ارزقنا من كرمك</td>
-                                    <td>
-                                        <button class="a-show" data-toggle="modal" data-target="#Show">
-                                            <i class='bx bx-show-alt'></i>
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <a data-toggle="modal" data-target="#Update" class="a-edit">
-                                                <i class='bx bx-edit'></i>
-                                            </a>
-                                            <a data-toggle="modal" data-target="#Delete" class="a-delete">
-                                                <i class='bx bx-trash'></i>
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                                <div class="col-md-12 mt-3">
+                                    <div class="a-btn btn-back">
+                                        <a href="">البحث</a>
+                                    </div>
+                                </div>
 
-                </section>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <div class="col-md-9 ">
+                    <section class="box-section9">
+
+                        <div class="d-flex align-items-center justify-content-between my-3">
+                            <div>
+                                <h5 class="h5-head">إدارة الأقسام</h5>
+                            </div>
+                            <div>
+                                <button onclick="clickCategory()" class="btn btn-success text-white">
+                                    الرجوع للجدول
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tabs">
+                            <div class="row tabs-nav">
+                                <div class="col-md-4 li-ac">
+                                    <a href="#tab-1"> الثقافة والفنون</a>
+                                </div>
+                                <div class="col-md-4 li-ac">
+                                    <a href="#tab-2">المغامرات والترفيه</a>
+                                </div>
+                                <div class="col-md-4 li-ac">
+                                    <a href="#tab-3"> أنسنة المدينة</a>
+                                </div>
+                            </div>
+
+                            <div class="tabs-stage">
+                                <!---Tab 1--->
+                                <div id="tab-1" class="div-tab">
+                                    <h5 class="h5-head mt-5 "> الأماكن المتعلقة بالثقافة والفنون</h5>
+                                    <p class="p-head">اي مكان يحذف سوف يحذف بصفة دائمة</p>
+                                    <div class="main-content overflow-auto">
+                                        <table id="files_list" class="table table-striped dt-responsive  "
+                                            style="width:100%">
+                                            <thead class="thead_dark">
+                                                <tr>
+                                                    <th class="th_text">#</th>
+                                                    <th class="th_text">اسم</th>
+                                                    <th class="th_text">عنوان المكان</th>
+                                                    <th class="th_text"> الوصف</th>
+                                                    <th class="th_text">التقييم </th>
+                                                    <th class="th_text">طريقة التواصل </th>
+                                                    <th class="th_text">المستخدم</th>
+                                                    <th class="th_text">صور المكان</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                                <!---Tab 2--->
+                                <div id="tab-2" class="div-tab">
+                                    <h5 class="h5-head mt-5 "> الأماكن المتعلقة بالمغامرات والترفيه</h5>
+                                    <p class="p-head">اي مكان يحذف سوف يحذف بصفة دائمة</p>
+                                    <div class="main-content">
+                                        <table id="files_list" class="table table-striped dt-responsive  "
+                                            style="width:100%">
+                                            <thead class="thead_dark">
+                                                <tr>
+                                                    <th class="th_text">#</th>
+                                                    <th class="th_text">اسم</th>
+                                                    <th class="th_text">عنوان المكان</th>
+                                                    <th class="th_text"> الوصف</th>
+                                                    <th class="th_text">التقييم </th>
+                                                    <th class="th_text">طريقة التواصل </th>
+                                                    <th class="th_text">المستخدم</th>
+                                                    <th class="th_text">صور المكان</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                                <!---Tab 3--->
+                                <div id="tab-3" class="div-tab">
+                                    <h5 class="h5-head mt-5 "> الأماكن المتعلقة بأنسنة المدينة</h5>
+                                    <p class="p-head">اي مكان يحذف سوف يحذف بصفة دائمة</p>
+                                    <div class="main-content">
+                                        <table id="files_list" class="table table-striped dt-responsive  "
+                                            style="width:100%">
+                                            <thead class="thead_dark">
+                                                <tr>
+                                                    <th class="th_text">#</th>
+                                                    <th class="th_text">اسم</th>
+                                                    <th class="th_text">عنوان المكان</th>
+                                                    <th class="th_text"> الوصف</th>
+                                                    <th class="th_text">التقييم </th>
+                                                    <th class="th_text">طريقة التواصل </th>
+                                                    <th class="th_text">المستخدم</th>
+                                                    <th class="th_text">صور المكان</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td> 40</td>
+                                                    <td> عبد العززي</td>
+                                                    <td>غير محدد</td>
+                                                    <td> test@gmail.com</td>
+                                                    <td> 4.5 <i class='bx bxs-star'></i></td>
+                                                    <td> الرياض</td>
+                                                    <td> اللهم ارزقنا من كرمك</td>
+                                                    <td>
+                                                        <button class="a-show" data-toggle="modal" data-target="#Show">
+                                                            <i class='bx bx-show-alt'></i>
+                                                        </button>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
     </main>
@@ -570,7 +1028,6 @@
 
 
 
-
     <!-- jQuery -->
     <script src="./BootstrapJS/jquery-3.3.1.js"></script>
     <!-- Data Table JS -->
@@ -584,7 +1041,8 @@
     <script src="./BootstrapJS/bootstrap.min.js"></script>
     <script src="./js/index.js"></script>
     <script src="./fontawesome/all.min.js"></script>
-
+    <!-- Tabs JS -->
+    <script src="./js/tabs.js"></script>
 </body>
 
 </html>

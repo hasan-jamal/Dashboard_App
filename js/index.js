@@ -41,3 +41,15 @@ for (let dropdown of $$(".dropdown")) {
     }
   });
 }
+// Show And Hide Div
+var category = document.getElementById("category");
+var subCategory = document.getElementById("subCategory");
+subCategory.style.display = "none";
+function clickSubCategory() {
+  category.style.display = "none";
+  subCategory.style.display = "block";
+}
+function clickCategory() {
+  category.style.display = "block";
+  subCategory.style.display = "none";
+}
